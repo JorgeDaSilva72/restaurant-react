@@ -1,8 +1,0 @@
-REACT_APP_FIREBASE_APIKEY = "AIzaSyAFlEvIbXfGUIHFdVF6S1DBCySuhZ2zGKU";
-REACT_APP_FIREBASE_AUTH_DOMAIN = "restaurantapp-fc06a.firebaseapp.com";
-REACT_APP_FIREBASE_DB_URL =
-  "https://restaurantapp-fc06a-default-rtdb.europe-west1.firebasedatabase.app";
-REACT_APP_FIREBASE_PROJECT_ID = "restaurantapp-fc06a";
-REACT_APP_FIREBASE_STORAGE_BUCKET = "restaurantapp-fc06a.appspot.com";
-REACT_APP_FIREBASE_MESSAGE_ID = "925803587519";
-REACT_APP_FIREBASE_APP_ID = "1:925803587519:web:501b66c5260775daf1a30a";
