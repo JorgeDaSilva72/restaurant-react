@@ -6,7 +6,7 @@ import { useStateValue } from "./context/StateProvider";
 import { getAllFoodItems } from "./utils/firebaseFunctions";
 import { actionType } from "./context/reducer";
 
-function App() {
+const App = () => {
   const [{ foodItems }, dispatch] = useStateValue();
 
   const fetchData = async () => {
@@ -21,6 +21,7 @@ function App() {
   useEffect(() => {
     fetchData();
   }, []);
+
   return (
     <AnimatePresence exitBeforeEnter>
       <div className="w-screen h-auto flex flex-col bg-primary">
@@ -35,6 +36,6 @@ function App() {
       </div>
     </AnimatePresence>
   );
-}
+};
 
 export default App;

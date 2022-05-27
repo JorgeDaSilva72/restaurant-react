@@ -18,13 +18,6 @@ export const heroData = [
     price: "5",
     imageSrc: burger,
   },
-  {
-    id: 3,
-    name: "Loukoums",
-    decp: "marocains",
-    price: "1.5",
-    imageSrc: loukoum,
-  },
 ];
 
 export const categories = [

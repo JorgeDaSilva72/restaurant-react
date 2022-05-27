@@ -48,7 +48,7 @@ const CreateContainer = () => {
       (error) => {
         console.log(error);
         setFields(true);
-        setMsg("Error while uploading : Try AGain 🙇");
+        setMsg("Erreur lors du transfert : Réessayer 🙇");
         setAlertStatus("danger");
         setTimeout(() => {
           setFields(false);
@@ -60,7 +60,7 @@ const CreateContainer = () => {
           setImageAsset(downloadURL);
           setIsLoading(false);
           setFields(true);
-          setMsg("Image uploaded successfully 😊");
+          setMsg("Image bien téléchargée 😊");
           setAlertStatus("success");
           setTimeout(() => {
             setFields(false);
@@ -77,7 +77,7 @@ const CreateContainer = () => {
       setImageAsset(null);
       setIsLoading(false);
       setFields(true);
-      setMsg("Image deleted successfully 😊");
+      setMsg("Image bien effacée 😊");
       setAlertStatus("success");
       setTimeout(() => {
         setFields(false);
@@ -90,7 +90,7 @@ const CreateContainer = () => {
     try {
       if (!title || !calories || !imageAsset || !price || !category) {
         setFields(true);
-        setMsg("Required fields can't be empty");
+        setMsg("Les champs doivent étre remplis");
         setAlertStatus("danger");
         setTimeout(() => {
           setFields(false);
@@ -109,7 +109,7 @@ const CreateContainer = () => {
         saveItem(data);
         setIsLoading(false);
         setFields(true);
-        setMsg("Data Uploaded successfully 😊");
+        setMsg("Données bien reçues 😊");
         setAlertStatus("success");
         setTimeout(() => {
           setFields(false);
@@ -119,7 +119,7 @@ const CreateContainer = () => {
     } catch (error) {
       console.log(error);
       setFields(true);
-      setMsg("Error while uploading : Try AGain 🙇");
+      setMsg("Erreur lors du transfert : Réessayer 🙇");
       setAlertStatus("danger");
       setTimeout(() => {
         setFields(false);
@@ -135,7 +135,7 @@ const CreateContainer = () => {
     setImageAsset(null);
     setCalories("");
     setPrice("");
-    setCategory("Select Category");
+    setCategory("Choisir une catégorie");
   };
 
   const fetchData = async () => {
@@ -172,7 +172,7 @@ const CreateContainer = () => {
             required
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder="Give me a title..."
+            placeholder="Donner un titre..."
             className="w-full h-full text-lg bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor"
           />
         </div>
@@ -183,7 +183,7 @@ const CreateContainer = () => {
             className="outline-none w-full text-base border-b-2 border-gray-200 p-2 rounded-md cursor-pointer"
           >
             <option value="other" className="bg-white">
-              Select Category
+              Choisir une catégorie
             </option>
             {categories &&
               categories.map((item) => (
@@ -209,7 +209,7 @@ const CreateContainer = () => {
                     <div className="w-full h-full flex flex-col items-center justify-center gap-2">
                       <MdCloudUpload className="text-gray-500 text-3xl hover:text-gray-700" />
                       <p className="text-gray-500 hover:text-gray-700">
-                        Click here to upload
+                        Cliquer ici pour envoyer
                       </p>
                     </div>
                     <input
@@ -226,7 +226,7 @@ const CreateContainer = () => {
                   <div className="relative h-full">
                     <img
                       src={imageAsset}
-                      alt="uploaded image"
+                      alt="uploaded"
                       className="w-full h-full object-cover"
                     />
                     <button
@@ -263,7 +263,7 @@ const CreateContainer = () => {
               required
               value={price}
               onChange={(e) => setPrice(e.target.value)}
-              placeholder="Price"
+              placeholder="Prix"
               className="w-full h-full text-lg bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor"
             />
           </div>
@@ -275,7 +275,7 @@ const CreateContainer = () => {
             className="ml-0 md:ml-auto w-full md:w-auto border-none outline-none bg-emerald-500 px-12 py-2 rounded-lg text-lg text-white font-semibold"
             onClick={saveDetails}
           >
-            Save
+            Sauvegarder
           </button>
         </div>
       </div>

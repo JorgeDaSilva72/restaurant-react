@@ -72,7 +72,8 @@ const RowContainer = ({ flag, data, scrollValue }) => {
               </p>
               <div className="flex items-center gap-8">
                 <p className="text-lg text-headingColor font-semibold">
-                  <span className="text-sm text-red-500">€</span> {item?.price}
+                  {item?.price}
+                  <span className="text-sm text-red-500"> €</span>
                 </p>
               </div>
             </div>
